@@ -37,7 +37,7 @@ output * bg ~/Pictures/F36-01-day.jpg fill
 #
 exec swayidle -w \
          timeout 600 'swaylock -f -c 000000' \
-         timeout 720 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+	 timeout 3600 'systemctl suspend' \
          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
